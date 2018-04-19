@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.1" package="com.ILCE.TVEducativa" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="15" />
+	<application android:label="TVEducativa.Android" android:icon="@drawable/id_tve_50_50_01"></application>
+</manifest>

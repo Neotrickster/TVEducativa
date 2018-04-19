@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamarians="clr-namespace:Xamarians.MediaPlayer;assembly=Xamarians.MediaPlayer"
+             x:Class="TVEducativa.Views.TVEducativaCanales"
+             Title="{Binding Title}" Icon="{Binding Icon}" IsBusy="{Binding IsBusy}" BackgroundColor="#000000">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="outerStack" Orientation="Vertical" Spacing="10" Padding="10"  >
+                <StackLayout x:Name="innerStack" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Image Aspect="AspectFit" Source="id_tve_icon_16_16.png" />
+                    <Label Text="Televisión Educativa" TextColor="White" />
+                </StackLayout>
+                <xamarians:VideoPlayer x:Name="VideoPlayer" WidthRequest="320" HeightRequest="240" AutoPlay="True" />
+                <Label x:Name="Canal" Text="Televisión Educativa" TextColor="White" />
+                <Grid x:Name="innerGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="{Binding screenSizeHeight}" />
+                        <RowDefinition Height="{Binding screenSizeHeight}" />
+                        <RowDefinition Height="{Binding screenSizeHeight}" />
+                    </Grid.RowDefinitions>
+                    <BoxView BackgroundColor="#E64E13" Grid.Column="1" Grid.Row="0" />
+                    <Image Source="id_apr_180_180_01.png" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Button x:Name="PlayAprButton" Opacity="0" Grid.Column="1" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PlayAprButton_OnClicked" />
+                    <BoxView BackgroundColor="#176E40" Grid.Column="2" Grid.Row="0" />
+                    <Image Source="id_cap_180_180_01.png" Grid.Column="2" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Button x:Name="PlayCapButton" Opacity="0" Grid.Column="2" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PlayCapButton_OnClicked" />
+                    <BoxView BackgroundColor="#6A1F7F" Grid.Column="1" Grid.Row="1" />
+                    <Image Source="id_ing_180_180_01.png" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Button x:Name="PlayIngButton" Opacity="0" Grid.Column="1" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PlayIngButton_OnClicked" />
+                    <BoxView BackgroundColor="#2E5768" Grid.Column="2" Grid.Row="1" />
+                    <Image Source="id_tb_180_180_01.png" Grid.Column="2" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Button x:Name="PlayTBButton" Opacity="0" Grid.Column="2" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PlayTBButton_OnClicked" />
+                    <BoxView BackgroundColor="#C71F1F" Grid.Column="1" Grid.Row="2" />
+                    <Image Source="id_ts_180_180_01.png" Grid.Column="1" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Button x:Name="PlayTSButton" Opacity="0" Grid.Column="1" Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PlayTSButton_OnClicked" />
+                    <BoxView BackgroundColor="#C71F1F" Grid.Column="2" Grid.Row="2" />
+                    <Image Source="id_tsm_180_180_01.png" Grid.Column="2" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Button x:Name="PlayTSMButton" Opacity="0" Grid.Column="2" Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Clicked="PlayTSMButton_OnClicked" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
